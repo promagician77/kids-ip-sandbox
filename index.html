@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Kids IP game — playable concept and scope</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23FFB703'/><circle cx='24' cy='28' r='5' fill='%23263238'/><circle cx='40' cy='28' r='5' fill='%23263238'/><path d='M22 40q10 9 20 0' stroke='%23263238' stroke-width='4' fill='none' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="hbar">
+    <div class="logo"><span class="mk">☺</span> Your IP, as a game <small>playable concept + honest scope</small></div>
+    <div class="by">by Luis</div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="play">Play the sandbox</button>
+    <button role="tab" data-tab="scope">Scope &amp; cost</button>
+    <button role="tab" data-tab="plan">Plan &amp; roles</button>
+    <button role="tab" data-tab="safe">Kids-safe by design</button>
+  </nav>
+</header>
+
+<main>
+<!-- PLAY -->
+<section id="play" class="panel">
+  <div class="playbar">
+    <p>A 2-minute taste of the play style your references share: no text, no failing, every tap does something. <b>Placeholder characters</b> stand in for your IP.</p>
+    <div class="pbtns"><button class="pill" id="notesBtn" aria-pressed="false">Show design notes</button><button class="pill ghost" id="resetBtn">Start over</button></div>
+  </div>
+  <div class="stagewrap" id="stagewrap">
+    <svg id="stage" viewBox="0 0 1600 900" role="img" aria-label="Kids sandbox: kitchen and garden"></svg>
+    <div class="notes" id="notes" hidden></div>
+    <div class="gate" id="gate" hidden></div>
+    <div class="hint" id="hint">Tap anything. Drag the friends around.</div>
+  </div>
+  <p class="rotate">Tip: turn your phone sideways to play bigger.</p>
+  <ul class="noteslist" id="noteslist" hidden></ul>
+  <div class="discover"><span>Things to find:</span> day/night window · lamp · fridge · feed a friend · tickle · sit on a chair · radio · grow and pick a carrot</div>
+</section>
+
+<!-- SCOPE -->
+<section id="scope" class="panel" hidden>
+  <div class="grid2">
+    <div class="card">
+      <h2>Shape version one</h2>
+      <p class="sub">Every choice below moves cost and time. Start from the recommended scope, then try a bigger launch.</p>
+      <div class="presets"><button class="pill" data-preset="lean">Lean pilot</button><button class="pill on" data-preset="rec">Recommended v1</button><button class="pill" data-preset="big">Bigger launch</button></div>
+      <div id="controls"></div>
+    </div>
+    <div class="card out">
+      <div class="est"><small>Indicative budget</small><b id="estCost">$0</b><span id="estWeeks"></span></div>
+      <div class="bars" id="bars"></div>
+      <h3>Biggest cost drivers in this scope</h3>
+      <ol class="drivers" id="drivers"></ol>
+      <h3>Team</h3>
+      <div class="team" id="team"></div>
+      <p class="fine">Indicative, for a small senior team. Firmed up after we see your IP brief and art. Store fees, voice talent, and IP licensing are outside these numbers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan" class="panel" hidden>
+  <div class="card">
+    <h2>Stages</h2>
+    <div class="stages" id="stages"></div>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h2>Who does what</h2>
+      <div class="raci">
+        <div class="col you"><h3>Your team</h3><ul>
+          <li>IP bible: characters, world rules, tone</li><li>Character sheets and style guide</li><li>Approval of art and gameplay at each stage</li><li>Voice talent (or approval of ours)</li><li>Store accounts, privacy policy, legal</li></ul></div>
+        <div class="col me"><h3>My team</h3><ul>
+          <li>Game design: play loops, scope, progression</li><li>Game art in your style, animation</li><li>Development, sound, kid testing</li><li>Kids-category compliance and store submission</li><li>Builds every two weeks, live after launch</li></ul></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Technology</h2>
+      <div class="tech">
+        <div><b>Unity</b><span>The standard for kids' sandbox games. Strong 2D tools, one codebase for iPhone, iPad, and Android, and kids-safe SDK choices.</span></div>
+        <div><b>Spine 2D animation</b><span>Characters move like your show, with small files that run well on older tablets.</span></div>
+        <div><b>Remote content</b><span>New rooms and seasonal items added without a full app update, built in from v1.</span></div>
+        <div><b>No accounts in v1</b><span>Saves stay on the device. No child data collected, no parental-consent flow needed yet.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFE -->
+<section id="safe" class="panel" hidden>
+  <div class="grid3">
+    <div class="card rule"><span class="tag">Apple</span><h3>Kids Category</h3><p>No third-party ads, and most third-party analytics are out. A parental gate before purchases, links, and settings.</p></div>
+    <div class="card rule"><span class="tag">Google</span><h3>Families policy</h3><p>Apps for kids must follow Families rules. Only certified ad SDKs if ads are ever used.</p></div>
+    <div class="card rule"><span class="tag">Law</span><h3>COPPA &amp; GDPR-K</h3><p>No personal data from children without verifiable parental consent. Easiest path: collect none.</p></div>
+  </div>
+  <div class="card">
+    <h2>How you earn, decided before art</h2>
+    <div class="money" id="money"></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h2>Risks I'd plan for</h2><div class="risks" id="risks"></div></div>
+    <div class="card"><h2>Built to grow</h2><div class="grow" id="grow"></div></div>
+  </div>
+</section>
+</main>
+<script src="sandbox.js"></script>
+<script src="scope.js"></script>
+</body>
+</html>
